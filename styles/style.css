@@ -47,8 +47,6 @@ p {
     text-align: center;
 }
 
-
-
 /* Seção de apresentação */
 
 #presentation{
@@ -127,19 +125,6 @@ p {
     z-index: -1;
 }
 
-.Navbar{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #280255;
-    z-index: 10;
-}
-.Navbar h1{
-    color: green;
-}
-
 .myphoto{
     margin-left: 30%;
 }
@@ -148,7 +133,69 @@ p {
     width: 400px;
 }
 
-/* Seção de Portifólio */
+/* Seção about me */
+.about{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(to bottom left, #120235, #7f0a9c);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Seção skills */
+.skills{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(to bottom left, #7f0a9c, #120235);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Seção projects */
+.projects{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(to bottom left, #120235, #7f0a9c);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Seção contact */
+.contact{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(to bottom left, #7f0a9c, #120235);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Seção de portfolio */
 
 #portfolio .portfolio{
     flex-direction: column;
