@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/styles2.css">
     <title>Motta's Personal Website</title>
+    <script defer src="scripts/app.js"></script>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
@@ -18,7 +18,6 @@
     <!-- presentation --> 
     <section id="presentation">
         <header class="navbar">
-            <a href="#" class="logo">Logo</a>
             <div class="group">
                 <ul class="navigation">
                     <li><a href="#about">About Me</a></li>
@@ -34,8 +33,10 @@
                 <h1>Olá,<span></span></h1>
                 <h1>meu nome é<span></span></h1>
                 <h1>Pedro Motta!<span></span></h1>
-                <a href="#portfolio" type="button" class="cta">Portifólio</a>
-                <a href="#portfolio" type="button" class="cta">Resume</a>
+                <div class="hidden buttons">
+                    <a href="#contact" style="--clr:#1e9bff" class="cta"><span>Hire me</span><i></i></a>
+                    <a href="documents/CVPedro Motta.pdf" target="_blank" download="CVPedro Motta.pdf" type="application/pdf" id="resume" style="--clr:#fb8500" class="cta"><span>Resume</span><i></i></a>
+                </div>
             </div>
             <div class="myphoto">
                 <img class="photoimg" src="images/Pessoas.png" alt="foto pessoal">
@@ -44,133 +45,80 @@
     </section>
 
     <!-- about me --> 
-    <section class="about" id="about">   
-        <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id 
-            est laborum.
-        </p>
+    <section class="about" id="about">
+        <div class="aboutme hidden">
+            <h1>About me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id 
+                est laborum.
+            </p>
+        </div>
+        <div class="aboutimg">
+            <img src="images/Pessoas.png" alt="Pedro Motta">
+            <h1>Software Developer</h1>
+        </div>
     </section>
 
     <!-- skills -->
     <section class="skills" id="skills">
-        <h1>Skills</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id 
-            est laborum.
-        </p>
+        <div class="skill hidden">
+            <h1>Skills</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id 
+                est laborum.
+            </p>
+        </div>
     </section>
 
     <!-- Projects -->
     <section class="projects" id="projects">
-        <h1>Projects</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id 
-            est laborum.
-        </p>
+        <div class="project hidden">
+            <h1>Projects</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id 
+                est laborum.
+            </p>
+        </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <h1>Contact me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate 
-            velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id 
-            est laborum.
-        </p>
-    </section> 
-
-    <section id="portfolio">
-        <div class="portfolio container">
-            <div class="portfolio header">
-                <h1 class="section-title"><span>Portifólio</span></h1>
-            </div>
-            <div class="all-projects">
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 1</h1>
-                        <h2>Project W</h2>
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. 
-                            Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                            Per aumento de cachacis, eu reclamis.Manduma pindureta quium dia nois paga.
-                            Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. 
-                            Aenean sit amet nisi.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="images/img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 2</h1>
-                        <h2>Project Z</h2>
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. 
-                            Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                            Per aumento de cachacis, eu reclamis.Manduma pindureta quium dia nois paga.
-                            Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. 
-                            Aenean sit amet nisi.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="images/img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 3</h1>
-                        <h2>Project Y</h2>
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. 
-                            Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                            Per aumento de cachacis, eu reclamis.Manduma pindureta quium dia nois paga.
-                            Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. 
-                            Aenean sit amet nisi.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="images/img-1.png" alt="img">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Projeto 4</h1>
-                        <h2>Project X</h2>
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. 
-                            Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                            Per aumento de cachacis, eu reclamis.Manduma pindureta quium dia nois paga.
-                            Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. 
-                            Aenean sit amet nisi.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="images/img-1.png" alt="img">
-                    </div>
-                </div>
-            </div>
+        <div class="contactme hidden">
+            <h1>Contact me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id 
+                est laborum.
+            </p>
         </div>
-    </section>
+    </section> 
+    
 </body>
 </html>

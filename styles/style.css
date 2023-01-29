@@ -47,6 +47,20 @@ p {
     text-align: center;
 }
 
+/* aparecimento */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 /* Seção de apresentação */
 
 #presentation{
@@ -75,25 +89,7 @@ p {
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 2.8s;
 }
-#presentation .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: gold;
-    background-color: transparent;
-    border: 2px solid gold;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 20px;
-    transition: .5s ease;
-    transition-property: background-color, color;
 
-}
-#presentation .cta:hover{
-    color: white;
-    font-weight: 500;
-    background-color: gold;
-}
 #presentation h1 span{
     position: absolute;
     top: 0;
@@ -125,6 +121,91 @@ p {
     z-index: -1;
 }
 
+/* buttons */
+
+#presentation .cta{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    top: 50px;
+
+    
+}
+.buttons{
+    transition-delay: 3s;
+}
+
+#resume{
+    margin-left: 50px;
+}
+
+#presentation .cta:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#presentation .cta::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+
+#presentation .cta span{
+    position: relative;
+    z-index: 1;
+}
+#presentation .cta i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#presentation .cta i::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+
+#presentation .cta:hover i::before{
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 34px 32px var(--clr);
+}
+
+#presentation .cta i::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+
+#presentation .cta:hover i::after{
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 32px -32px var(--clr);
+}
+
 .myphoto{
     margin-left: 30%;
 }
@@ -133,12 +214,69 @@ p {
     width: 400px;
 }
 
+/* Navbar */
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: transparent; /* ou #280255 */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+
+.group{
+    display: flex;
+    align-items: center;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+header ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: gold;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 /* Seção about me */
 .about{
     min-height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center; 
     background-image: linear-gradient(to bottom left, #120235, #7f0a9c);
@@ -146,6 +284,23 @@ p {
     background-position: top center;
     position: relative;
     z-index: 1;
+}
+
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 40%;
+}
+
+.aboutimg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
 }
 
 /* Seção skills */
@@ -163,6 +318,14 @@ p {
     z-index: 1;
 }
 
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
 /* Seção projects */
 .projects{
     min-height: 100vh;
@@ -176,6 +339,14 @@ p {
     background-position: top center;
     position: relative;
     z-index: 1;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 /* Seção contact */
@@ -193,81 +364,12 @@ p {
     z-index: 1;
 }
 
-
-
-/* Seção de portfolio */
-
-#portfolio .portfolio{
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-#portfolio .portfolio-header h1{
-    margin-bottom: 50px;
-}
-#portfolio .all-projects {
+.contactme{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-#portfolio .project-item{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-#portfolio .project-info {
-    padding: 30px;
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
-    color: white;
-}
-
-#portfolio .project-info h1{
-    font-size: 4rem;
-    font-weight: 500;
-}
-
-#portfolio .project-info h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
-#portfolio .project-img {
-    flex-basis: 50%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-
-#portfolio .project-img:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top:0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: 0.7;
-}
-#portfolio .project-img img{
-    transition: 0.5s ease transform;
-}
-#portfolio .project-item:hover .project-img img{
-    transform: scale(1.1);
+    width: 50%;
 }
 
 /* Keyframes */
