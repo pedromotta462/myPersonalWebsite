@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/aboutStyle.css">
+    <link rel="stylesheet" href="styles/skillStyle.css">
+    <link rel="stylesheet" href="styles/projectStyle.css">
+    <link rel="stylesheet" href="styles/contactStyle.css">
     <title>Motta's Personal Website</title>
     <script defer src="scripts/app.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
@@ -28,17 +34,17 @@
             </div>
         </header>
         
-        <div class="presentation container">
+        <div class="presentation container" id="Home">
             <div>
                 <h1>Olá,<span></span></h1>
                 <h1>meu nome é<span></span></h1>
                 <h1>Pedro Motta!<span></span></h1>
-                <div class="hidden buttons">
+                <div class="hidden buttons showscrollup">
                     <a href="#contact" style="--clr:#1e9bff" class="cta"><span>Hire me</span><i></i></a>
                     <a href="documents/CVPedro Motta.pdf" target="_blank" download="CVPedro Motta.pdf" type="application/pdf" id="resume" style="--clr:#fb8500" class="cta"><span>Resume</span><i></i></a>
                 </div>
             </div>
-            <div class="myphoto">
+            <div class="myphoto hidden">
                 <img class="photoimg" src="images/midjourney1.3.png" alt="foto pessoal">
             </div>
         </div>
@@ -48,17 +54,35 @@
     <section class="about" id="about">
         <div class="aboutme">
             <h1 class="hidden">About me</h1>
-            <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id 
-                est laborum.
+            <p class="hidden">
+                Atualmente estou estudando desenvolvimento de software em busca de me tornar um desenvolvedor fullstack, focando mais na parte backend com NodeJS;
+                Tenho bastante experiência com robótica, que desenvolvi na equipe Maracatronics da UFPE. Também já fui bolsista CNPQ onde trabalhei em um projeto de pesquisa junto a empresa Aeroespacial Tecnologia em Energia e Sistemas Renováveis LTDA, onde tive a oportunidade de trabalhar na área de dados;
+                <br><br>
+                Técnico de jogos digitais na ETE-Cícero Dias (formado);
+                Graduando em Engenharia Elétrica na UFPE (cursando);
+                Tecnólogo em Sistemas para Internet na Unicap (cursando);
+                Desenvolvedor de Dispositivos IoT na startup e.AÍ Tecnologias Inteligentes.
             </p>
+            <div class="socialmidia hidden"> 
+                <a href = "mailto:psvmotta@gmail.com">
+                    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
+                </a>
+                <a href="https://www.linkedin.com/in/pedro-motta-a442a31a6" target="_blank">
+                    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+                </a> 
+                <a href="https://t.me/Pedro_Motta" target="_blank">
+                    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" target="_blank">
+                </a>
+                <a href="https://www.instagram.com/p_mottaa" target="_blank">
+                    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank">
+                </a>
+                <a href="https://contate.me/pedromotta" target="_blank">
+                    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank">
+                </a> 
+                <a href="https://open.spotify.com/playlist/2CWlShdLNWc1Ysal61OYEe?si=jRhOOvmlS-ydtBO0MvShaA&utm_source=whatsapp" target="_blank">
+                    <img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white" target="_blank">
+                </a>
+            </div>
         </div>
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -71,24 +95,189 @@
                 </div>
             </div>
         </div>
+        
     </section>
 
     <!-- skills -->
     <section class="skills" id="skills">
         <div class="skill hidden">
             <h1>Skills</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id 
-                est laborum.
-            </p>
         </div>
+        <div class="container2 hidden">
+            <div class="box" style="--clr:#89ec5b;">
+                <div class="content">
+                    <div class="icon">
+                        <img src="images/design.png" alt="Designing">
+                        <!-- <ion-icon name="brush"></ion-icon>
+                    -->
+                    </div>
+                    <div class="text">
+                        <h3>Designing</h3>
+                        <p>
+                            Experiência com ferramentas de design.
+                        </p>
+                        <div class="swiper mySwiper">
+                            <div class="skill_icons swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                                    <h3>Figma</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
+                                    <h3>Canva</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+                                    <h3>Photoshop</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" />
+                                    <h3>Illustrator</h3>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" style="--clr:#eb5ae5;">
+                <div class="content">
+                    <div class="icon">
+                        <img src="images/coding (1).png" alt="code">
+                        <!-- <ion-icon name="code-slash"></ion-icon>
+                        -->
+                    </div>
+                    <div class="text">
+                        <h3>Development</h3>
+                        <p>
+                            Experiência com linguagens de programação
+                        </p>
+                        <div class="swiper mySwiper">
+                            <div class="skill_icons swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                                    <h3>HTML5</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                                    <h3>CSS</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                                    <h3>JavaScript</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+                                    <h3>TypeScript</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                                    <h3>Java</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                                    <h3>Python</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/sql-file-format-symbol.png" alt="SQL language">
+                                    <h3>SQL</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+                                    <h3>C</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+                                    <h3>C#</h3>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" style="--clr:#5b98eb;">
+                <div class="content">
+                    <div class="icon">
+                        <img src="images//monitor.png" alt="framework">
+                        <!-- <ion-icon name="search"></ion-icon>
+                        -->
+                        </div>
+                    <div class="text">
+                        <h3>Technologies</h3>
+                        <p>
+                            Experiência com ferramentas, frameworks e tecnologias atuais
+                        </p>
+                        <div class="swiper mySwiper">
+                            <div class="skill_icons swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                                    <h3>React</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                                    <h3>NodeJS</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+                                    <h3>MySQL</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+                                    <h3>Tailwind</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                                    <h3>Bootstrap</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
+                                    <h3>Firebase</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                                    <h3>Git</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                                    <h3>GitHub</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                                    <h3>Sass</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" />
+                                    <h3>Numpy</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" />
+                                    <h3>Pandas</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />
+                                    <h3>TensorFlow</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" />
+                                    <h3>Unity</h3>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
     <!-- Projects -->
@@ -125,8 +314,14 @@
                 est laborum.
             </p>
         </div>
-        
     </section> 
-    
+    <a href="#Home" class="scrollup" id="scholl-up">
+        <ion-icon class="scrollup__icon" name="arrow-up-outline"></ion-icon>
+    </a>
+    <!-- SwiperJS -->
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <!-- ------ -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
