@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    background-image: linear-gradient(to bottom left, #120235, #7f0a9c);
+    background-image: linear-gradient(to bottom, #120235, #7209b7, #001d3d);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -19,4 +19,25 @@
     align-items: center;
     justify-content: center;
     width: 50%;
+}
+
+/* SwiperJS */
+.swiper-container2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+.swiper-slide2 {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+
+.swiper-slide2 img {
+    display: block;
+    width: 100%;
 }

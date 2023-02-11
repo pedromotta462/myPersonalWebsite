@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-    background-image: linear-gradient(to bottom left, #120235, #7f0a9c);
+    background-image: linear-gradient(to bottom,#120235, #7209b7, #001d3d);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -115,18 +115,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    padding: 10px;
 }
 
 .socialmidia a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 10px;
-    width: 70px;
-    height: 70px;
-    margin-right: 40px;
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
 }
 
 .socialmidia a img{

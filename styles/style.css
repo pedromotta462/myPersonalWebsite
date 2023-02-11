@@ -304,17 +304,17 @@ header ul li a:hover::before{
 /* Scroll Bar */
 ::-webkit-scrollbar{
     width: .60rem;
-    background-color: hsl(250, 12%, 80%);
+    background-color:#7109b76e;/*hsl(250, 12%, 80%);*/
     border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: hsl(250, 12%, 36%);
+    background-color: #3a0ca3; /* hsl(250, 12%, 36%);*/
     border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background-color: hsl(250, 8%, 65%);
+    background-color: #4361ee;/* hsl(250, 8%, 65%);*/
 }
 
 /* Keyframes */
