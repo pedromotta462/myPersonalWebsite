@@ -213,6 +213,10 @@ h2
     margin-right: 50px;
 }
 
+.inputBox textarea{
+    font-size: 16px;
+}
+
 .inputBox 
 {
 	position: relative;
@@ -273,13 +277,13 @@ h2
 }
 
 .send_button{
-    margin-top: 50px;
+    margin-top: 35px;
 }
 /* Botão de enviar */
 
 button {
     font-family: inherit;
-    font-size: 20px;
+    font-size: 16px;
     background: #410096;
     color: white;
     padding: 0.7em 1em;
