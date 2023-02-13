@@ -33,7 +33,7 @@ targetElements.forEach(targetElement => {
 
 /* Swipper1 */
 
-let swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
     cssMode: true,
     loop: true,
     navigation: {
@@ -48,6 +48,31 @@ let swiper = new Swiper(".mySwiper", {
 
 /* Swipper2 */
 
+var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: '2.5',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
+
+/*
+
 let swiper2 = new Swiper(".swiper-container", {
     effect: "coverflow",
     grabCursor: true,
@@ -56,7 +81,7 @@ let swiper2 = new Swiper(".swiper-container", {
     coverflowEffect: {
         rotate: 20,
         stretch: 0,
-        depth: 200,
+        depth: 500,
         modifier: 1,
         slideShadows: true,
     },
@@ -64,8 +89,8 @@ let swiper2 = new Swiper(".swiper-container", {
     /*autoplay:{
         delay: 500,
         disableOnInteraction: false,
-    },*/
+    },
     pagination: {
         el: ".swiper-pagination",
     },
-});
+});*/
