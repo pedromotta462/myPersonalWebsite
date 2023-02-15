@@ -84,7 +84,6 @@
   padding: 0 1rem;
   margin: 0 auto;
   font-size: 62.5%;
-  border: 1px solid;
 }
 
 #tranding {
@@ -99,7 +98,6 @@
 
 #tranding .tranding-slider {
     height: 52rem;
-    border: 1px solid;
     padding: 2rem 0;
     position: relative;
 }

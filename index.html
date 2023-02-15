@@ -367,7 +367,7 @@
             
             <div class="container_contact">
 
-                <form autocomplete="off">
+                <form autocomplete="off" action="https://formsubmit.co/9126180d4a9691e90207c80ebd3775cc" method="POST">
                     
                     <h2 class="hidden">Contact Me</h2>
 
@@ -398,30 +398,32 @@
 
                         <div class="form_div">
                             <div class="inputBox hidden">
-                                <input class="input" type="text" required="required" id="name">
+                                <input class="input" name="name" type="text" required="required" id="name">
                                 <span>Name</span>
                                 <i></i>
                             </div>
                             <div class="inputBox hidden">
-                                <input class="input" type="text" required="required" id="email">
+                                <input class="input" name="email" type="email" required="required" id="email">
                                 <span>Email</span>
                                 <i></i>
                             </div>
                             <div class="inputBox hidden">
-                                <input class="input" type="text" required="required" id="nome">
+                                <input class="input" name="_subject" type="text" required="required" id="subject">
                                 <span>Subject</span>
                                 <i></i>
                             </div>
                             <div class="inputBox hidden">
-                                <textarea placeholder="Message" required="required" cols="0" rows="5" class="contact_input input"></textarea>
+                                <textarea name="message" placeholder="Message" required="required" cols="0" rows="5" class="contact_input input"></textarea>
+                                
                                 <!--
                                 <input class="input" type="password" required="required" id="senha">
+                                <span>Message</span>
+                                -->
                                 
-                                <span>Message</span>-->
                                 <i></i>
                             </div>
 
-                            <button class="send_button hidden">
+                            <button class="send_button hidden" type="submit" target="_blank">
                                 <div class="svg-wrapper-1">
                                     <div class="svg-wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
