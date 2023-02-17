@@ -1,16 +1,33 @@
+O package.json é o arquivo que descreve as dependências e os scripts de um projeto em Node.js. Como cada projeto é único, o package.json também é único para cada projeto. No entanto, para construir um projeto, geralmente é necessário especificar alguns scripts, como o script de construção build.
+
+Aqui está um exemplo de um package.json que pode ser usado como base para o seu projeto:
+
+json
+Copy code
 {
-  "hosting": {
-    "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+  "name": "myPersonalWebsite",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "npm run clean && npm run build-css && npm run build-js",
+    "build-css": "sass --no-source-map src/scss/main.scss dist/css/main.css",
+    "build-js": "webpack --mode production",
+    "clean": "rm -rf dist/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal website"
+  ],
+  "author": "Pedro Motta",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^8.8.0"
+  },
+  "devDependencies": {
+    "sass": "^1.35.1",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
   }
 }
