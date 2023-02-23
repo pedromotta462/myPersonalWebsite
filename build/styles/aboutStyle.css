@@ -132,3 +132,64 @@
     
     width: 100px;
 }
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+    }
+    .aboutme {
+        width: 40%;
+        margin-right: 5%;
+        text-align: right;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .aboutme {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .aboutme {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .aboutme h1 {
+        font-size: 40px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .flip-card {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .socialmidia a {
+        width: 80px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .socialmidia a img {
+        width: 80px;
+    }
+}
