@@ -4,6 +4,7 @@
   "description": "personal portfolio website",
   "main": "app.js",
   "scripts": {
+    "build": "mypersonalwebsite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
