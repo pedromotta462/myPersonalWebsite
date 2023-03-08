@@ -33,39 +33,93 @@
 .budy {
       position: relative;
       height: 100%;
-    }
+}
 
-    .budy {
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 85vh;
-      width: 100%;
-      background: transparent;
-    }
+.budy {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    width: 100%;
+    background: transparent;
+}
 
-    .mySwiper2 {
-      width: 90%;
-      padding-top: 50px;
-      padding-bottom: 200px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 5px 2px #120235;
-    }
+.mySwiper2 {
+    width: 90%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px #120235;
+}
 
-    .a2 {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 300px;
-      background: #000;
-      -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
-    }
+.a2 {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #000;
+    border-radius: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
 
-    .a2 img {
-      display: block;
-      width: 100%;
-    }
+.a2 img {
+    display: block;
+    width: 100%;
+}
+
+/*  Cards  */
+
+.project-card{
+  width: 100%;
+  height: 65vh;
+  background-color: #333;
+  border-radius: 10px;
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+  outline-offset: -8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-image{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .6;
+  transition: transform .75s;
+}
+.project-card:hover .project-card-image{
+  transform: scale(1.08);
+}
+.project-card-title{
+  position: absolute;
+  left: 15px;
+  top: 115px;
+  font-size: 30px;
+  text-shadow:  0 0 1px rgba(0, 0, 0, .5);
+  color:azure
+}
+
+.project-card-description{
+  position: absolute;
+  left: 15px;
+  bottom: 90px;
+  font-size: 14px;
+  text-shadow:  0 0 1px rgba(0, 0, 0, .5);
+  color:azure
+}
+
+.project-card-button{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 20px;
+  text-shadow:  0 0 1px rgba(0, 0, 0, .5);
+  color:azure
+}
