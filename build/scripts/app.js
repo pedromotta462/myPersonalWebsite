@@ -48,6 +48,24 @@ var swiper = new Swiper(".mySwiper", {
 
 /* Swipper2 */
 
+var swiper2 = new Swiper(".mySwiper2", {
+    effect: "coverflow",
+    cssMode: false,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+    },
+    loop: true,
+});
+
+
+/*
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -71,7 +89,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     }
 });
 
-/*
 
 let swiper2 = new Swiper(".swiper-container", {
     effect: "coverflow",
