@@ -53,7 +53,20 @@ var swiper2 = new Swiper(".mySwiper2", {
     cssMode: false,
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 3,
+    breakpoints: {
+        400:{
+            slidesPerView: 1.2,
+        },
+        640: {
+            slidesPerView: 1.7,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
     coverflowEffect: {
         rotate: 20,
         stretch: 0,
