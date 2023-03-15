@@ -54,8 +54,11 @@ var swiper2 = new Swiper(".mySwiper2", {
     grabCursor: true,
     centeredSlides: true,
     breakpoints: {
-        400:{
+        200:{
             slidesPerView: 1.2,
+        },
+        440:{
+            slidesPerView: 1.3,
         },
         640: {
             slidesPerView: 1.7,
