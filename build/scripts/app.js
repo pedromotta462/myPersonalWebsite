@@ -16,13 +16,24 @@ hiddenElements.forEach((el) => observer.observe(el));
 /* Show scrollup */
 const targetElements = document.querySelectorAll('.showscrollup');
 const button = document.getElementById('scholl-up');
+const navItem = document.querySelectorAll('#navitemclr')
 
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             button.classList.remove('show-scroll');
+            navItem[0].style.color = "gold";
+            navItem[1].style.color = "gold";
+            navItem[2].style.color = "gold";
+            navItem[3].style.color = "gold";
+            navItem[4].style.color = "gold";
         } else {
             button.classList.add('show-scroll');
+            navItem[0].style.color = "rgba(255, 217, 0, 0.171)";
+            navItem[1].style.color = "rgba(255, 217, 0, 0.171)";
+            navItem[2].style.color = "rgba(255, 217, 0, 0.171)";
+            navItem[3].style.color = "rgba(255, 217, 0, 0.171)";
+            navItem[4].style.color = "rgba(255, 217, 0, 0.171)";
         }
     });
 });
@@ -54,7 +65,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     grabCursor: true,
     centeredSlides: true,
     breakpoints: {
-        400:{
+        200:{
             slidesPerView: 1.2,
         },
         640: {

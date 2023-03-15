@@ -22,21 +22,22 @@
 
 <body>
     <!-- presentation --> 
+    <header class="navbar">
+        <div class="group">
+            <ul class="navigation">
+                <li><a id="navitemclr" href="#Home">Home</a></li>
+                <li><a id="navitemclr" href="#about">About</a></li>
+                <li><a id="navitemclr" href="#skills">Skills</a></li>
+                <li><a id="navitemclr" href="#projects">Projects</a></li>
+                <li><a id="navitemclr" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
     <section id="presentation">
-        <header class="navbar">
-            <div class="group">
-                <ul class="navigation">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </header>
+        
 
         <div class="presentation container" id="Home">
             <div>
-                
                 <h1>Olá,<span></span></h1>
                 <h1>meu nome é<span></span></h1>
                 <h1>Pedro Motta!<span></span></h1>
@@ -49,7 +50,6 @@
                 <img class="photoimg" src="images/midjourney1.3.png" alt="foto pessoal">
             </div>
         </div>
-        <h1>This Website is on Building...</h1>
     </section>
 
     <!-- about me --> 
@@ -64,39 +64,48 @@
                 Minhas habilidades em desenvolvimento ágil, integração contínua e entrega contínua tornam-me um ativo valioso para empresas de tecnologia que buscam inovação, eficiência e qualidade em seus produtos e serviços. 
                 Estou animado em fazer parte de uma equipe de tecnologia talentosa e comprometida em criar soluções de ponta que transformam a maneira como as pessoas vivem e trabalham.
             </p>
-            <div class="socialmidia hidden"> 
-                <a href = "mailto:psvmotta@gmail.com">
-                    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
-                </a>
-                <a href="https://www.linkedin.com/in/pedro-motta-a442a31a6" target="_blank">
+        </div>
+        <div class="socialmidia hidden">
+
+            <div class="flip-card hidden">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/midjourney1.2.png" alt="#">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="images/profile-pic.png" alt="#">
+                        <h3 class="card-title">Software Developer</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="icons_midia hidden">
+                <a style="--clr:#0474b4;" href="https://www.linkedin.com/in/pedro-motta-a442a31a6" target="_blank">
                     <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
-                </a> 
-                <a href="https://t.me/Pedro_Motta" target="_blank">
-                    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" target="_blank">
                 </a>
 
-                <a href="https://www.instagram.com/p_mottaa" target="_blank">
-                    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank">
+                <a style="--clr:#333333;" href = "mailto:psvmotta@gmail.com">
+                    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
                 </a>
-                <a href="https://contate.me/pedromotta" target="_blank">
+
+                <a style="--clr:#2ca5e0;" href="https://t.me/Pedro_Motta" target="_blank">
+                    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" target="_blank">
+                </a>
+                
+                <a style="--clr:#25d366;" href="https://contate.me/pedromotta" target="_blank">
                     <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank">
                 </a> 
-                <a href="https://open.spotify.com/playlist/2CWlShdLNWc1Ysal61OYEe?si=jRhOOvmlS-ydtBO0MvShaA&utm_source=whatsapp" target="_blank">
+
+                <a style="--clr:#e4405f;" href="https://www.instagram.com/p_mottaa" target="_blank">
+                    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank">
+                </a>
+
+                <a style="--clr:#1ed760;" href="https://open.spotify.com/playlist/2CWlShdLNWc1Ysal61OYEe?si=jRhOOvmlS-ydtBO0MvShaA&utm_source=whatsapp" target="_blank">
                     <img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white" target="_blank">
                 </a>
             </div>
         </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="images/midjourney1.2.png" alt="#">
-                </div>
-                <div class="flip-card-back">
-                    <img src="images/profile-pic.png" alt="#">
-                    <h3 class="card-title">Software Developer</h3>
-                </div>
-            </div>
-        </div>
+        
         
     </section>
 
@@ -287,7 +296,7 @@
         <div class="project hidden">
             <h1>Projects</h1>
         </div>
-        <div class="budy">
+        <div class="budy hidden">
             <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide a2">
@@ -505,7 +514,6 @@
 
     <!-- Contact -->
     <section class="contact">
-
         <div class="box_contact" id="contact">
             
             <div class="container_contact">
@@ -557,12 +565,6 @@
                             </div>
                             <div class="inputBox hidden">
                                 <textarea name="message" placeholder="Message" required="required" cols="0" rows="5" class="contact_input input"></textarea>
-                                
-                                <!--
-                                <input class="input" type="password" required="required" id="senha">
-                                <span>Message</span>
-                                -->
-                                
                                 <i></i>
                             </div>
 
@@ -584,7 +586,6 @@
                 </form>
             </div>
         </div>
-        
     </section> 
     <!-- Footer -->
     <!-- UpButton -->
