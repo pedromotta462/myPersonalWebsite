@@ -13,57 +13,6 @@
     z-index: 1;
 }
 
-.contactme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.contact_container{
-    row-gap: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    border: 1px solid;
-    width: 1100px;
-    height: 500px;
-}
-
-.contact_information{
-    display: flex;
-    margin-bottom: 2rem;
-    margin-right: 50px;
-}
-
-.contact_information ion-icon{
-    font-size: 2rem;
-    margin-right: .75rem;
-}
-
-.contact_title{
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-.contact_subtitle{
-    font-size: .813rem;
-    color: hsl(250, 6%, 61%);
-}
-
-.contact_content{
-    background-color: hsl(250, 70%, 96%);
-    border-radius: .5rem;
-    padding: .75rem 1rem .25rem;
-}
-
-.contact_label{
-    font-size: smaller;
-    color: hsl(250, 8%, 15%);
-}
-
 .contact_input{
     width: 100%;
     background-color: hsl(250, 70%, 96%);
@@ -74,7 +23,7 @@
     padding: .25rem .5rem .5rem 0;
 }
 
-/* Login */
+/* form */
 
 .box_contact{
 	display: flex;
@@ -92,8 +41,8 @@
 .container_contact 
 {
 	position: relative;
-	width: 1100px;
-	height: 600px;
+	width: 110rem;
+	height: 60rem;
 	background: #a1a1a1;
 	border-radius: 8px;
 	overflow: hidden;
@@ -215,6 +164,7 @@ h2
 
 .inputBox textarea{
     font-size: 16px;
+    resize: none;
 }
 
 .inputBox 
@@ -334,4 +284,92 @@ to {
     }
 }
 
-
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .box_contact{
+        margin: 1px;
+    }
+    .container_contact{
+        width: 50rem;
+        height: 95rem;
+    }
+    form{
+        padding: 1rem;
+    }
+    .container_contact_form{
+        flex-direction: column;
+    }
+    .contact_iconsImg{
+        margin-right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .contact_iconsImg span{
+        margin-top: 0px;
+        margin: .5rem;
+    }
+    .form_div{
+        margin-right: 0px;
+        margin: .5rem;
+    }
+    .send_button{
+        margin-top: 0px;
+        margin: 1rem;
+    }
+    .img_contact{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container_contact{
+        width: 40rem;
+        height: 82rem;
+    }
+    form{
+        padding: 1rem;
+    }
+    .container_contact_form{
+        flex-direction: column;
+    }
+    .contact_iconsImg{
+        margin-right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .contact_iconsImg span{
+        margin-top: 0px;
+        margin: .5rem;
+    }
+    .form_div{
+        margin-right: 0px;
+        margin: .5rem;
+    }
+    .send_button{
+        margin-top: 0px;
+        margin: 1rem;
+    }
+    .img_contact{
+        width: 300px;
+    }
+    .container_contact::after{
+        width: 40rem;
+        height: 82rem;
+    }
+    .container_contact::before {
+	    width: 40rem;
+        height: 82rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container_contact{
+        width: 35rem;
+        height: 82rem;
+    }
+    .container_contact::after{
+        width: 35rem;
+        height: 82rem;
+    }
+    .container_contact::before {
+	    width: 35rem;
+        height: 82rem;
+    }
+}

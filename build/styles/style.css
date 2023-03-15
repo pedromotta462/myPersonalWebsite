@@ -32,19 +32,10 @@ p {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-}
-
-.section-title {
-    font-size: 4rem;
-    font-weight: 500;
-    color: black;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-align: center;
+    justify-content: space-evenly;
+    padding: 10%;
 }
 
 /* aparecimento */
@@ -134,12 +125,14 @@ p {
     font-weight: 400;
     padding: 10px 30px;
     transition: 0.5s;
-    top: 50px;
-
-    
 }
 .buttons{
-    transition-delay: 3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition-delay: 1.5s;
+    margin-top: 3rem;
 }
 
 #resume{
@@ -171,11 +164,11 @@ p {
 #presentation .cta i::before{
     content: '';
     position: absolute;
-    top: -6px;
+    top: -5px;
     left: 100%;
     transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     background: #27282c;
     border: 2px solid var(--clr);
     transition: 0.5s;
@@ -190,11 +183,11 @@ p {
 #presentation .cta i::after{
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -5px;
     left: 0;
     transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     background: #27282c;
     border: 2px solid var(--clr);
     transition: 0.5s;
@@ -207,31 +200,41 @@ p {
 }
 
 .myphoto{
-    margin-left: 20%;
+    margin-left: 0%;
 }
 
 .photoimg{
-    margin-top: 5%;
-    width: 400px;
-    height: 400px;
+    width: 35rem;
+    height: 35rem;
     border-radius: 50%;
     box-shadow: 2px 2px 10px black;
+    z-index: -100000;
 }
 
 /* Navbar */
 
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    background: transparent; /* ou #280255 */
+    height: 7rem;
+    background: #28025f72; /* ou #280255 */
+    z-index: 2;
     padding: 20px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    transition: all .5s ease;
+}
+
+.navbar:hover{
+    height: 7rem;
+    background: #29025fe0; /* ou #280255 */
+}
+.navbar:hover a{
+    color: gold !important;
 }
 
 .group{
@@ -252,11 +255,12 @@ header ul li{
 header ul li a{
     position: relative;
     text-decoration: none;
-    font-size: 1.5em;
-    color: whitesmoke;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    transition: all .5s ease;
 }
+
 
 header ul li a::before{
     content: '';
@@ -343,22 +347,49 @@ header ul li a:hover::before{
 }
 
 /* Media Query */
-@media only screen and (min-width: 768px) {
-    #portfolio .project-item {
-        flex-direction: row;
-        height: 400px;
-        margin: 0;
-        width: 100%;
-        border-radius: 0;
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .buttons{
+        flex-direction: column;
+        height: 20rem;
     }
-    #portfolio .all-projects .project-info{
-        height: 100%
+    #resume{
+        margin-left: 0px;
+        margin: 1rem;
     }
-    #portfolio .all-projects .project-img{
-        height: 100%
+}
+@media screen and (max-width: 767px) {
+    #presentation h1{
+        font-size: 3rem;
     }
-    #portfolio .project-item:nth-child(even) {
-        flex-direction: row-reverse;
+    .container{
+        flex-direction: column-reverse;
     }
-
+    .photoimg{
+        width: 20rem;
+        height: 20rem;
+    }
+    .buttons{
+        flex-direction: column;
+        height: 20rem;
+    }
+    #resume{
+        margin-left: 0px;
+        margin: 1rem;
+    }
+}
+@media screen and (max-width: 524px) {
+    header ul li a{
+        font-size: 1.2rem;
+    }
+    header ul{
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    header ul li a{
+        font-size: 1rem;
+    }
+    header ul{
+        gap: 10px;
+    }
 }
