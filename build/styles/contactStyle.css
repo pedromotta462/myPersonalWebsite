@@ -228,7 +228,14 @@ h2
 
 .send_button{
     margin-top: 35px;
+    cursor: pointer;
 }
+
+.send_button:disabled{
+    cursor: not-allowed;
+    background: #555b69;
+}
+
 /* Botão de enviar */
 
 button {
