@@ -81,6 +81,27 @@ p {
     animation-delay: 2.8s;
 }
 
+#presentation h2{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal_hole .5s ease forwards;
+    animation-delay: 3.8s;
+}
+#presentation h2 span{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 3.5s;
+    background-color: gold;
+}
+
 #presentation h1 span{
     position: absolute;
     top: 0;
@@ -100,6 +121,8 @@ p {
 #presentation h1:nth-child(3) span{
     animation-delay: 2.5s;
 }
+
+
 #presentation::after{
     content: '';
     position: absolute;
@@ -325,13 +348,22 @@ header ul li a:hover::before{
 
 @keyframes text_reveal{
     100%{
-        color: white;
+        color: #f4f4f4;
+        text-shadow: 1.5px 1.5px #000;
+    }
+}
+@keyframes text_reveal_hole{
+    100%{
+        color: #f4f4f4;
+        text-shadow: 1.5px 1.5px #f4f4f4;
     }
 }
 @keyframes text_reveal_name{
     100%{
         color: gold;
         font-weight: 500px;
+        text-shadow: 1.5px 1.5px #000;
+
     }
 }
 
