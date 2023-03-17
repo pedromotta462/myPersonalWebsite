@@ -131,6 +131,24 @@
   color: azure;
 }
 
+@media screen and (max-width: 767px) {
+  .project-card-icons{
+    left: 25vh;
+    bottom: 2vh;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .project-card-icons{
+    left: 15vh;
+    bottom: 2vh;
+  }
+  .project-card-description{
+    font-size: 10px;
+  }
+
+}
+
 .project-card-icons img{
   margin: 0px 20px 0px 0px;
 }
