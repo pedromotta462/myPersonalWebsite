@@ -539,7 +539,7 @@
             
             <div class="container_contact">
 
-                <form data-form autocomplete="off" action="https://formsubmit.co/ajax/9126180d4a9691e90207c80ebd3775cc" method="POST"> <!--https://formsubmit.co/ajax/9126180d4a9691e90207c80ebd3775cc-->
+                <form id="myForm" data-form autocomplete="off" action="https://formsubmit.co/ajax/9126180d4a9691e90207c80ebd3775cc" method="POST"> <!--https://formsubmit.co/ajax/9126180d4a9691e90207c80ebd3775cc-->
                     
                     <h2 class="hidden">Contact Me</h2>
 
@@ -575,7 +575,7 @@
                                 <i></i>
                             </div>
                             <div class="inputBox hidden">
-                                <input class="input" name="email" type="email" required="required" id="email">
+                                <input class="input" name="email" type="email" required="required" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 <span>Email</span>
                                 <i></i>
                             </div>
@@ -585,7 +585,7 @@
                                 <i></i>
                             </div>
                             <div class="inputBox hidden">
-                                <textarea name="message" placeholder="Message" required="required" cols="0" rows="5" class="contact_input input"></textarea>
+                                <textarea minlength="10" id="message" name="message" placeholder="Message" required="required" cols="0" rows="5" class="contact_input input"></textarea>
                                 <i></i>
                             </div>
 

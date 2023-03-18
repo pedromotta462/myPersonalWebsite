@@ -91,7 +91,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
 });
 
-
+/* Send email */
 
 class FormSubmit {
     constructor(settings) {
@@ -103,8 +103,34 @@ class FormSubmit {
         }
         this.sendForm = this.sendForm.bind(this);
     }
+    validateForm() {
+        var form = document.getElementById("myForm");
+        var name = form.elements["name"].value;
+        var email = form.elements["email"].value;
+        var subject = form.elements["_subject"].value;
+        var message = form.elements["message"].value;
+    
+        if (name === "" && email === "" && subject === "" && message === "") {
+            alert("Por favor, preencha todos os campos obrigatórios");
+            return false;
+        } if (name === "" || name === undefined) {
+            alert("Por favor, insira um nome válido");
+            return false;
+        } else if (!email.match(form.elements["email"].pattern)) {
+            alert("Por favor, insira um endereço de e-mail válido");
+            return false;
+        } else if (subject === undefined || subject === "") {
+            alert("Por favor, preencha o campo subject");
+            return false;
+        } else if (message === "" || message === undefined || message.length < form.elements["message"].minlength) {
+            alert("A mensagem deve ter pelo menos " + 1 + " caractere");
+            return false;
+        } else {
+            return true;
+        }
+    }
     displaySuccess() {
-        this.form.innerHTML = this.settings.success;
+        alert("Mensagem Enviada!");
     }
     displayError() {
         this.form.innerHTML = this.settings.error;
@@ -120,21 +146,27 @@ class FormSubmit {
     onSubmission(event) {
         event.preventDefault();
         event.target.disabled = true;
-        event.target.innerText = "Enviando...";
+    }
+    afterSubmission(event){
+        event.preventDefault();
+        event.target.disabled = false;
     }
 
     async sendForm(event) {
         try {
-            this.onSubmission(event);
-            await fetch(this.url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-                body: JSON.stringify(this.getFormObject()),
-            });
-            this.displaySuccess();
+            if (this.validateForm()) {
+                this.onSubmission(event);
+                await fetch(this.url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify(this.getFormObject()),
+                });
+                this.displaySuccess();
+                this.afterSubmission(event);
+            }
             } catch (error) {
                 this.displayError();
                 throw new Error(error);
@@ -146,7 +178,6 @@ class FormSubmit {
         }
 }
 
-
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
@@ -154,4 +185,12 @@ const formSubmit = new FormSubmit({
     error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>",
 });
 formSubmit.init();
+
+
+/* validate form */
+const sendButton = document.getElementById("sendbtn");
+
+sendButton.addEventListener('click', () => {
+    validateForm();
+})
 
