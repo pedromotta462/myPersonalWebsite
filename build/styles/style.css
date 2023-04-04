@@ -390,9 +390,10 @@ header ul li a:hover::before{
     }
 }
 @media screen and (max-width: 767px) {
-    #presentation h1{
+    #presentation h1, #presentation h2{
         font-size: 3rem;
     }
+    
     .container{
         flex-direction: column-reverse;
     }
