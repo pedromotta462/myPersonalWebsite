@@ -120,8 +120,8 @@
 
 .project-card-icons{
   position: absolute;
-  left: 190px;
-  bottom: 15px;
+  left: 48%;
+  bottom: 3%;
   width: 35px;
   height: 35px;
   display: flex;
@@ -131,18 +131,7 @@
   color: azure;
 }
 
-@media screen and (max-width: 767px) {
-  .project-card-icons{
-    left: 25vh;
-    bottom: 2vh;
-  }
-}
-
 @media screen and (max-width: 440px) {
-  .project-card-icons{
-    left: 15vh;
-    bottom: 2vh;
-  }
   .project-card-description{
     font-size: 10px;
   }
